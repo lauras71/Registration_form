@@ -26,6 +26,10 @@ body {
 }
 
 @media screen and (max-width: 767px) {
+    * {
+      box-sizing: border-box;
+    }
+
     body {
         overflow-x: hidden;
     }
