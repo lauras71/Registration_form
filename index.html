@@ -15,25 +15,25 @@
         <div class="content">
             <div class="left">
 
-                <h1>Rothschild & Co meets JEAA </h1>
-                    <div class="text">
-                        <p align="justify"> Rothschild & Co is among one of the world’s most leading independent financial advisory groups, with it having a legacy of over 200 years in terms of
-                        guiding families, entrepreneurs, and institutions through complex financial decisions.<br><br>
+                <h1 class="responsive-title">
+                    JEAA<br class="mobile-break"> meets <br class="mobile-break"> Rothschild & Co
+                </h1>
 
-                        In this exclusive event, professionals from Rothschild’s Wealth Management division will offer a clear overview of what wealth management truly means.
-                        They, in addition to that, will give an engaging overview how it differs when compared with asset management, family offices, and commercial banking.<br><br>
+                <div class="text">
+                    <p align="justify"> Rothschild & Co - Understanding Wealth Management <br>
+                        5th of May | Room D1.01, Free University of Bozen-Bolzano <br><br>
+                        <strong>Rothschild & Co </strong>is one of the world's most <strong>renowned independent financial advisory groups</strong>, with over two centuries of experience helping families, entrepreneurs, and institutions navigate complex financial decisions. <br><br>
+                        In this event, professionals from the <strong>Wealth Management</strong> division will offer a clear and practical overview of what wealth management involves, and how it differs from <strong>asset management</strong>, <strong>family offices</strong>, and <strong>commercial banking</strong>. <br><br>
+                        The session will be led by <strong>Denise Zotta</strong>, Assistant Director in Wealth Management, and <strong>Marco Busetto</strong>, Chief Investment Officer for Italy. After the presentation, there will be a <strong>networking aperitivo</strong> where you'll have the chance to speak directly with the speakers and other participants. <br><br>
+                        <strong>Spots are limited</strong>. Make sure to register early to secure your place.
+                    </p>  
+                </div>
 
-                        Attend an engaging presentation given by Denise Zotta (Assistant Director, Wealth Management) and Marco Busetto (Chief Investment Officer, Italy), 
-                        followed by a networking aperitivo.<br><br>
-
-                        Spots are limited - register now to secure your place!
-                        </p>
-                    </div>
             </div>
 
-          
             <div class="right">
                 <form action="https://formspree.io/f/xzzeylgb" method="POST">
+
                     <input type="text" name="First Name" placeholder="First Name" required />
                     <input type="text" name="Last Name" placeholder="Last Name" required />
                     <input type="email" name="Email" placeholder="Email" required />
@@ -72,8 +72,10 @@
                     </div>
           
                     <button type="submit">Submit</button>
+
                 </form>
             </div>
+
         </div>
     
         <svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -93,24 +95,21 @@
 <script>
     const form = document.querySelector("form");
   
-  form.addEventListener("submit", function(e) {
-    const email = form.querySelector('input[name="Email"]')?.value;
+    form.addEventListener("submit", function(e) {
+        const email = form.querySelector('input[name="Email"]')?.value;
 
-    if (email && localStorage.getItem(`submitted_${email}`)) {
-      alert("You have already submitted the form with this email.");
-      e.preventDefault();
-      return false;
-    }
+        if (email && localStorage.getItem(`submitted_${email}`)) {
+            alert("You have already submitted the form with this email.");
+            e.preventDefault();
+            return false;
+        }
 
-    if (email) {
-      localStorage.setItem(`submitted_${email}`, "true");
-    }
-  });
-    
+        if (email) {
+            localStorage.setItem(`submitted_${email}`, "true");
+        }
+    });
 </script>
 
-  
-  
 </body>
 
 </html>
