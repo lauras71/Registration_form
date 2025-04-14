@@ -52,9 +52,8 @@ body {
         display: inline;
     }
     
-    .left h1 {
+    .left h1.responsive-title {
         font-size: 2rem;
-        margin-top: -50px;
         align-self: center;
     }
   
