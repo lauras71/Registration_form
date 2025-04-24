@@ -35,12 +35,12 @@
 
             <div class="right">
                 <!-- <form action="https://formspree.io/f/xzzeylgb" method="POST"> -->
-                <form action="https://formspree.io/f/xjkwvewp" method="POST">    
+                <form action="https://formspree.io/f/xjkwvewp" method="POST">     
 
-                    <input type="text" name="First Name" placeholder="First Name" required />
-                    <input type="text" name="Last Name" placeholder="Last Name" required />
-                    <input type="email" name="Email" placeholder="Email" required />
-
+                    <input type="text" id="firstName" name="First Name" placeholder="First Name" required />
+                    <input type="text" id="lastName" name="Last Name" placeholder="Last Name" required />
+                    <input type="email" id="email" name="Email" placeholder="Email" required />
+                    
                     <select name="Faculty" placeholder="Faculty" required >
                         <option value="select">Faculty</option>
                         <option value="A, E and Food Sciences">Agricultural, Environmental and Food Sciences</option>
@@ -75,7 +75,7 @@
                     </div>
           
                     <button type="submit">Submit</button>
-
+                      
                 </form>
             </div>
 
@@ -90,23 +90,61 @@
     </section>
 
     
+      
+<!--
 <script>
     const form = document.querySelector("form");
   
     form.addEventListener("submit", function(e) {
         const email = form.querySelector('input[name="Email"]')?.value;
-
+/*
         if (email && localStorage.getItem(`submitted_${email}`)) {
-            alert("You have already submitted the form with this email.");
-            e.preventDefault();
-            return false;
-        }
+          alert("You have already submitted the form with this email.");
+          e.preventDefault();
+          return false;
+        }*/
 
         if (email) {
-            localStorage.setItem(`submitted_${email}`, "true");
+          localStorage.setItem(`submitted_${email}`, "true");
         }
     });
 </script>
+-->
+<script>
+    
+document.querySelector("form").addEventListener("submit", async function(e) {
+  e.preventDefault();
+
+  const formData = new FormData(this);
+  const email = formData.get("Email");
+  const firstName = formData.get("First Name");
+  const lastName = formData.get("Last Name");
+
+  // Manda l'email con Brevo
+  await fetch("https://api.brevo.com/v3/smtp/email", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "api-key": "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"
+    },
+    body: JSON.stringify({
+      sender: { name: "JEAA", email: "master@jeaa.it" },
+      to: [{ email: email}],
+      templateId: 1, // <- ID del tuo template
+      params: {
+        FIRSTNAME: firstName
+      }
+    })
+  });
+
+  // Dopo l'invio, lascia che formspree faccia il redirect
+  this.submit();
+});
+</script>
+
+</script>
+
+
 
 </body>
 
