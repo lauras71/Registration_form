@@ -119,7 +119,7 @@ document.querySelector("form").addEventListener("submit", async function(e) {
   const firstName = formData.get("First Name");
   const lastName = formData.get("Last Name");
 
-  await fetch("/.netlify/functions/send-email", {
+  await fetch("/.netlify/functions/send-emails", {
     method: "POST",
     body: JSON.stringify({ email, firstName, lastName }),
   });
