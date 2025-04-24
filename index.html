@@ -111,7 +111,6 @@
 </script>
 -->
 <script>
-    
 document.querySelector("form").addEventListener("submit", async function(e) {
   e.preventDefault();
 
@@ -120,29 +119,17 @@ document.querySelector("form").addEventListener("submit", async function(e) {
   const firstName = formData.get("First Name");
   const lastName = formData.get("Last Name");
 
-  // Manda l'email con Brevo
-  await fetch("https://api.brevo.com/v3/smtp/email", {
+  await fetch("/.netlify/functions/send-email", {
     method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      "api-key": "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"
-    },
-    body: JSON.stringify({
-      sender: { name: "JEAA", email: "master@jeaa.it" },
-      to: [{ email: email}],
-      templateId: 1, // <- ID del tuo template
-      params: {
-        FIRSTNAME: firstName
-      }
-    })
+    body: JSON.stringify({ email, firstName, lastName }),
   });
 
-  // Dopo l'invio, lascia che formspree faccia il redirect
+  // Ora puoi inviare anche il form a Formspree, se serve
   this.submit();
 });
 </script>
 
-</script>
+
 
 
 
