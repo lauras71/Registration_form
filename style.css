@@ -47,6 +47,8 @@ body {
         align-items: center;
         top: 0 !important; 
         margin-top: 0 !important;
+        margin-left: 15px;
+        margin-right: 15px;
     }
 
     .mobile-break {
@@ -67,10 +69,11 @@ body {
     .right {
         width: 100%;
         max-width: 100%;
-        padding: 1.5rem;   
-        margin: 1rem 0 3rem 0 !important;   
-        margin-top: 0 !important;
-        margin-left: 0 !important;
+        margin-right: 10px;
+        margin-top: 0 !important; 
+        /*margin: 1rem 0 3rem 0 !important;   
+        padding: 1.5rem;  
+        margin-left: 0 !important;*/
         align-self: center;
         margin-bottom: 3rem;
     }  
