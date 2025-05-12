@@ -3,13 +3,13 @@ body {
     /*font-family: 'Segoe UI', sans-serif;
     background-color: #ffffff;*/
     color: #1a1a1a;
-    overflow-x: hidden;  
+    overflow-x: hidden;      
 }
   
 .hero {
-    background: #1C355E;
-    color: white;
-    padding: 21rem 2rem 0 2rem; /*il primo parametro era 25*/
+    background: #282828;
+    color: white; 
+    padding: 17rem 0rem 0 0rem; 
     position: relative;
 }
   
@@ -21,7 +21,8 @@ body {
     margin: 0 auto;
     flex-wrap: wrap;
     position: relative;
-    top: -150px; /*era -180px*/
+    top: -120px;
+    
 }
 
 .mobile-break {
@@ -52,7 +53,7 @@ body {
         display: inline;
     }
 
-    .left h1.responsive-title {
+    .subtext h1.responsive-title {
         font-size: 2.2rem;
         align-self: center;
     }
@@ -127,7 +128,7 @@ body {
     background: white;
     padding: 2rem;
     border-radius: 15px;
-    margin-top: -100px; 
+    margin-top: -45px; 
     color: #000;
     width: 350px; 
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
@@ -143,9 +144,19 @@ body {
     font-size: 13px;    
     font-family: 'Montserrat';
 }
+
+.privacy-consent label a {
+    color: #cccf34;
+}
   
 .privacy-consent input[type="checkbox"] {
     margin-right: 10px;
+    accent-color: #ffe600;
+    
+}
+
+.privacy-consent input[type="checkbox"]:checked {
+    margin-right: 10px;    
 }
 
 .privacy-consent {
@@ -170,6 +181,7 @@ input {
 input, select, textarea {
     font-family: 'Montserrat';
     font-size: 14px;
+    
 }
   
 input::placeholder,
@@ -187,10 +199,8 @@ select {
   
 button {
     padding: 0.75em;
-    /*
-    background-color: #0074D9;*/
     background-color: #efecea;
-    color: #1C355E;
+    color: #282828;
     border: none;
     border-radius: 8px;
     cursor: pointer;
@@ -201,20 +211,10 @@ button {
 }
   
 button:hover {
-    background-color: #1C355E;
-    color: #efecea;
+    background-color: #ffe600;
+    color: #282828;
     cursor: pointer;
-}
-  
-.wave {
-    position: absolute;
-    bottom: 0; 
-    left: 0;
-    width: 100%;
-    height: auto;  
-    margin-bottom: -85px;
-    display: block;
-} 
+}    
 
 .footer-logos {
     background: white;
@@ -224,7 +224,7 @@ button:hover {
     flex-wrap: wrap;
     padding: 2rem 2rem;
     gap: 2rem;
-    border-top: 5px solid white;
+    /*border-top: 9px solid white;*/
 }
   
 .footer-logos a {
