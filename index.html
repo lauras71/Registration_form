@@ -7,14 +7,13 @@
   <link rel="stylesheet" href="style.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
   <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
-
 </head>
 <body>
     
     <section class="hero">
         <div class="content">
-            <div class="left">
 
+            <div class="left">
                 <div class="subtext">
                     <h1 align = "justify" class="responsive-title">
                         EY - Experiencing Strategy and <br class="mobile-break"> Assessment <br class="mobile-break"> in Action
@@ -31,7 +30,6 @@
                         <strong style="color: #ffe600; font-weight: 700;">Spots are limited</strong>. Make sure to register early to secure your place.
                     </p>  
                 </div>
-
             </div>
 
             <div class="right">
@@ -89,43 +87,18 @@
             <a href="https://www.ey.com/it_it" target="_blank" class="custom-ey-logo"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/EY_logo_2019.svg/2048px-EY_logo_2019.svg.png" alt="EY"> </a> 
         </section>
 
-        
     </section>
-    <!--
-    <section class="footer-logos">
-        <a href="https://www.unibz.it/en/" target="_blank"> <img src="https://i.postimg.cc/QNvwqq4v/unibz-logo.png" alt="Unibz"> </a>
-        <a href="https://www.jeaa.it/en/" target="_blank"> <img src="https://i.postimg.cc/tJSdLdnV/jeaa-junior-enterprise-alto-adige-logo-1-Photoroom-1.png" alt="Jeaa"> </a>
-        <a href="https://www.ey.com/it_it" target="_blank"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/EY_logo_2019.svg/2048px-EY_logo_2019.svg.png" alt="EY"> </a> 
-    </section>
-    -->
-
-    
       
-
-<script>
-    const form = document.querySelector("form");
-  
-    form.addEventListener("submit", function(e) {
-        const email = form.querySelector('input[name="Email"]')?.value;
-/*
-        if (email && localStorage.getItem(`submitted_${email}`)) {
-          alert("You have already submitted the form with this email.");
-          e.preventDefault();
-          return false;
-        }*/
-
-        if (email) {
-          localStorage.setItem(`submitted_${email}`, "true");
-        }
-    });
-</script>
-
-
-
-
-
-
+    <script>
+        const form = document.querySelector("form");
+    
+        form.addEventListener("submit", function(e) {
+            const email = form.querySelector('input[name="Email"]')?.value;
+            if (email) {
+            localStorage.setItem(`submitted_${email}`, "true");
+            }
+        });
+    </script>
 
 </body>
-
 </html>
